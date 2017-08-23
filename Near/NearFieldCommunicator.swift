@@ -28,10 +28,7 @@ class NearFieldCommunicator: NSObject {
         if let aSession = session {
             aSession.invalidate()
         }
-        session = NFCNDEFReaderSession(delegate: delegate, queue: nil, invalidateAfterFirstRead: false)
-        session.invalidate()
-        session = NFCNDEFReaderSession(delegate: delegate, queue: nil, invalidateAfterFirstRead: false)
-        print("is ready \(session.isReady)")
+        session = NFCNDEFReaderSession(delegate: delegate, queue: nil, invalidateAfterFirstRead: true)
         self.session.begin()
     }
 

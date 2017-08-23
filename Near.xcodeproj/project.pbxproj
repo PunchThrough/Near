@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B2378A7D1F4DDF2F003050FD /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2378A7C1F4DDF2F003050FD /* TableViewCell.swift */; };
+		B2378A7F1F4DE0F6003050FD /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2378A7E1F4DE0F6003050FD /* DetailsViewController.swift */; };
 		B27DAC8C1EE6FD1D009A9653 /* CoreNFC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B28DF23F1EE6FB42005EA143 /* CoreNFC.framework */; };
 		B28DF22B1EE6F845005EA143 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28DF22A1EE6F845005EA143 /* AppDelegate.swift */; };
-		B28DF22D1EE6F845005EA143 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28DF22C1EE6F845005EA143 /* ViewController.swift */; };
+		B28DF22D1EE6F845005EA143 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28DF22C1EE6F845005EA143 /* MainViewController.swift */; };
 		B28DF2301EE6F845005EA143 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B28DF22E1EE6F845005EA143 /* Main.storyboard */; };
 		B28DF2321EE6F845005EA143 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B28DF2311EE6F845005EA143 /* Assets.xcassets */; };
 		B28DF2351EE6F845005EA143 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B28DF2331EE6F845005EA143 /* LaunchScreen.storyboard */; };
@@ -17,11 +19,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		B24196011EF2E3480051437F /* NFCReader.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; name = NFCReader.entitlements; path = "../../../../Downloads/NFC-Reader-for-iPhone-CoreNFC--master/NFCReader.entitlements"; sourceTree = "<group>"; };
+		B2378A7A1F4CA1D4003050FD /* NFCReader.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NFCReader.entitlements; sourceTree = "<group>"; };
+		B2378A7C1F4DDF2F003050FD /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		B2378A7E1F4DE0F6003050FD /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		B27DAC8B1EE6FCBB009A9653 /* FileProvider.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FileProvider.framework; path = System/Library/Frameworks/FileProvider.framework; sourceTree = SDKROOT; };
 		B28DF2271EE6F845005EA143 /* Near.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Near.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B28DF22A1EE6F845005EA143 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B28DF22C1EE6F845005EA143 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B28DF22C1EE6F845005EA143 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		B28DF22F1EE6F845005EA143 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B28DF2311EE6F845005EA143 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B28DF2341EE6F845005EA143 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -62,14 +66,16 @@
 		B28DF2291EE6F845005EA143 /* Near */ = {
 			isa = PBXGroup;
 			children = (
-				B24196011EF2E3480051437F /* NFCReader.entitlements */,
 				B28DF22A1EE6F845005EA143 /* AppDelegate.swift */,
-				B28DF22C1EE6F845005EA143 /* ViewController.swift */,
+				B2378A7A1F4CA1D4003050FD /* NFCReader.entitlements */,
+				B28DF22C1EE6F845005EA143 /* MainViewController.swift */,
+				B2378A7E1F4DE0F6003050FD /* DetailsViewController.swift */,
 				B28DF22E1EE6F845005EA143 /* Main.storyboard */,
 				B28DF2311EE6F845005EA143 /* Assets.xcassets */,
 				B28DF2331EE6F845005EA143 /* LaunchScreen.storyboard */,
 				B28DF2361EE6F845005EA143 /* Info.plist */,
 				B28DF23C1EE6F875005EA143 /* NearFieldCommunicator.swift */,
+				B2378A7C1F4DDF2F003050FD /* TableViewCell.swift */,
 			);
 			path = Near;
 			sourceTree = "<group>";
@@ -115,7 +121,7 @@
 				TargetAttributes = {
 					B28DF2261EE6F845005EA143 = {
 						CreatedOnToolsVersion = 9.0;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -155,9 +161,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B28DF22D1EE6F845005EA143 /* ViewController.swift in Sources */,
+				B28DF22D1EE6F845005EA143 /* MainViewController.swift in Sources */,
+				B2378A7D1F4DDF2F003050FD /* TableViewCell.swift in Sources */,
 				B28DF22B1EE6F845005EA143 /* AppDelegate.swift in Sources */,
 				B28DF23D1EE6F875005EA143 /* NearFieldCommunicator.swift in Sources */,
+				B2378A7F1F4DE0F6003050FD /* DetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,15 +300,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Near/NFCReader.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R5JUTH26F4;
 				INFOPLIST_FILE = Near/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.punchthrough.Near;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "93658457-b763-4f75-a739-ae8fa5648b75";
-				PROVISIONING_PROFILE_SPECIFIER = near;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos11.0;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -312,15 +320,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R5JUTH26F4;
 				INFOPLIST_FILE = Near/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.punchthrough.Near;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "93658457-b763-4f75-a739-ae8fa5648b75";
-				PROVISIONING_PROFILE_SPECIFIER = near;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos11.0;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -53,6 +53,17 @@ extension MainViewController: NFCProtocol {
      */
     public func readerSession(_ session: NFCNDEFReaderSession, didInvalidateWithError error: Error) {
         print("\(error)")
+        
+        // 204 is a raised when a single read is completed.
+        guard let err = error as? NSError, err.code != 204 else {
+            return
+        }
+        DispatchQueue.main.async {
+            let alert = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
+            let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+            alert.addAction(action)
+            self.present(alert, animated: true, completion: nil)
+        }
     }
 
     /*!
@@ -79,8 +90,7 @@ extension MainViewController: NFCProtocol {
      * @discussion      Gets called when the NFC reader session has become active. RF is enabled and reader is scanning for tags.
      *                  The @link readerSession:didDetectTags: @link/ will be called when a tag is detected.
      */
-    public func readerSessionDidBecomeActive(_ session: NFCReaderSession)
-    {
+    public func readerSessionDidBecomeActive(_ session: NFCReaderSession) {
         print("readerSessionDidBecomeActive")
     }
 
@@ -92,8 +102,7 @@ extension MainViewController: NFCProtocol {
      *
      * @discussion      Gets called when the reader detects NFC tag(s) in the polling sequence.
      */
-    public func readerSession(_ session: NFCReaderSession, didDetect tags: [NFCTag])
-    {
+    public func readerSession(_ session: NFCReaderSession, didDetect tags: [NFCTag]) {
         print("didDetect tags: \(tags)")
     }
 }
@@ -136,7 +145,6 @@ extension MainViewController : UITableViewDelegate {
         tableView.deselectRow(at: indexPath, animated: true)
     }
 }
-
 
 extension Substring {
     func toString() -> String {

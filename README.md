@@ -14,3 +14,4 @@ This project is a sample app showing how to use CoreNFC with NDEF tags or hardwa
 
 From the main screen, tapping scan will show the system UI for NFC scanning. Hold the tag or device near the top of the phone. A scan result will appear. You can drill down into the message and see individual message records.
 
+See our [blog](https://punchthrough.com/blog/posts/corenfc-the-missing-link) for more information. 
